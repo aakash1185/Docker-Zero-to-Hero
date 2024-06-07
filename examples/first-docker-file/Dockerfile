@@ -6,6 +6,8 @@ WORKDIR /app
 # Copy the files from the host file system to the image file system
 COPY . /app
 
+ENV PIP_BREAK_SYSTEM_PACKAGES 1
+
 # Install the necessary packages
 RUN apt-get update && apt-get install -y python3 python3-pip
 
